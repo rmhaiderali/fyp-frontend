@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loading {
+  width: 26px;
+  height: 26px;
+  animation: loading 0.75s linear infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading > :first-child {
+  fill: none;
+  opacity: 0.2;
+  stroke-width: 4;
+  stroke: currentColor;
+}
+.loading > :last-child {
+  fill: none;
+  stroke-width: 4;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 60;
+  stroke: currentColor;
+}
